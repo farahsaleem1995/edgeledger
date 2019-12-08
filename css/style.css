@@ -1,0 +1,290 @@
+/* @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1100px;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.text-primary {
+  color: #93cb52;
+}
+.text-light {
+  color: #f4f4f4;
+}
+.text-dark {
+  color: #333;
+}
+
+.bg-primary {
+  background: #93cb52;
+  color: #fff;
+}
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.btn-primary {
+  background: #93cb52;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #7fb343;
+}
+
+.btn-light {
+  background: #f4f4f4;
+  color: #333;
+}
+.btn-light:hover {
+  background: #d4d4d4;
+  color: #111;
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+.btn-dark:hover {
+  background: #2a2a2a;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #444;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  min-height: 3rem;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  z-index: 2;
+  transition: all 0.5s ease-in;
+}
+
+#navbar .logo {
+  font-size: 1.2rem;
+}
+
+#navbar .menu-button {
+  display: none;
+  width: 2.2rem;
+  height: 1.75rem;
+  padding: 0 0.4rem;
+  margin: 0.4rem 0;
+  border-radius: 0.3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 0.4rem;
+}
+
+/* Overlay when mobile navigation */
+.overlay {
+  display: none;
+}
+
+/* Showcase */
+#showcase {
+  position: relative;
+  background: #333 url("../img/showcase.jpg") no-repeat center center/cover;
+  height: 90vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Section: What We Do */
+#what .items {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+#what .items .item i {
+  background: #93cb52;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* SectionL WHo We Are */
+#who {
+  display: flex;
+  flex-direction: row;
+}
+
+#who > div {
+  flex: 1;
+}
+
+#who .who-img {
+  background: #333 url("../img/people.jpg") center center/cover;
+}
+
+/* Section: CLients */
+#clients .items {
+  display: flex;
+  flex-direction: row;
+}
+
+#clients .items img {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+/* Sectin: Contact */
+#contact {
+  display: flex;
+  flex-direction: row;
+}
+
+#contact .contact-form,
+#contact .map {
+  flex: 1;
+}
+
+#contact .contact-form h2,
+#contact .contact-form p {
+  margin: 0 0.75rem;
+}
+
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  resize: none;
+}
